@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout PRO</title>
+  <script type="text/javascript" src="index.js" defer></script>
+</head>
+<body>
+ <h1>O mundo assombrado pelos demônios</h1>
+  <h2>Carl Sagan</h2>
+  <p>Descrição bacana</p>
+	<b>Preço:</b> R$ 
+	<span>10</span>
+	
+	<div>
+  	<img src="sagan.jpeg" alt="Capa do Livro">
+	</div>
+
+		<div>
+			<div class="summary-item">
+				<span class="text">Subtotal</span><br>
+				<input id="unit-price" value="10"></input><br><br>
+				<span class="text">Quantidade</span><br>
+				<input id="quantity" label="quantity" value="1"></input>
+			</div>
+			<br>
+			<!-- <button  id="btn-preference">Checkout</button>		 -->
+		</div>
+		<div id="wallet_container"></div>
+
+		<script src="https://sdk.mercadopago.com/js/v2"></script>
+		<script src="/secrets.js"></script>
+		<script>
+		  const mp = new MercadoPago(testRealUserAT);
+		</script>
+</body>
+</html>

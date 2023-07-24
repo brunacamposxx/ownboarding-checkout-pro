@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+  #form-checkout {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+  }
+
+  .container {
+    height: 18px;
+    display: inline-block;
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 2px;
+    padding: 1px 2px;
+  }
+
+
+  
+#result-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  #result-container p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  #result-container strong {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  #result-container p.status-approved {
+    color: green;
+  }
+  
+  #result-container p.status-pending {
+    color: orange;
+  }
+  
+  #result-container p.status-rejected {
+    color: red;
+  }
+</style>
+<form id="form-checkout" method="POST">
+  <select type="text" id="form-checkout__cardId"></select>
+  <div id="form-checkout__securityCode-container" class="container"></div>
+  <input name="token" id="token" hidden>
+  <button type="submit">Enviar</button>
+  <div id="result-container" hidden></div>
+</form>
+
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script src="/secrets.js"></script>
+<script>
+  const mp = new MercadoPago(prod_pk);
+</script>
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="form-checkout">
+        <div>
+          <div>
+            <label for="payerFirstName">Nome</label>
+            <input id="form-checkout__payerFirstName" name="payerFirstName" type="text">
+          </div>
+          <div>
+            <label for="payerLastName">Sobrenome</label>
+            <input id="form-checkout__payerLastName" name="payerLastName" type="text">
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input id="form-checkout__email" name="email" type="text">
+          </div>
+          <div>
+            <label for="identificationType">Tipo de documento</label>
+            <select id="form-checkout__identificationType" name="identificationType" type="text"></select>
+          </div>
+          <div>
+            <label for="identificationNumber">Número do documento</label>
+            <input id="form-checkout__identificationNumber" name="identificationNumber" type="text">
+          </div>
+        </div>
+    
+        <div>
+          <div>
+            <input type="hidden" name="transactionAmount" id="transactionAmount" value="100">
+            <input type="hidden" name="description" id="description" value="Nome do Produto">
+            <input type="hidden" name="paymentMethodId" id="paymentMethodId" value="pix">
+            <input type="hidden" name="dateOfExpiration" id="dateOfExpiration" value="2023-07-20T10:36:20.325-03:00">
+
+
+            <br>
+            <button type="button" onclick="sendPayment();">Pagar</button>
+          </div>
+          <div id="container"></div> 
+        </div>
+      </form>
+      <script src="https://sdk.mercadopago.com/js/v2"></script>
+      <script src="/secrets.js"></script>
+      <script>
+        const mp = new MercadoPago(prod_pk);
+      </script>
+      <script src="app.js"></script>
+</body>
+</html>

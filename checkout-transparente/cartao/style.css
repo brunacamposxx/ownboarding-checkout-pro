@@ -1,0 +1,31 @@
+#result-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  #result-container p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  #result-container strong {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  #result-container p.status-approved {
+    color: green;
+  }
+  
+  #result-container p.status-pending {
+    color: orange;
+  }
+  
+  #result-container p.status-rejected {
+    color: red;
+  }
+  
